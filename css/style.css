@@ -1,0 +1,457 @@
+body {
+  font-family: 'Red Hat Text', sans-serif;
+  color: #F0EBF0;
+  /*background-color: #121212;*/
+  /*background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAMTAAADEwE9ZoPHAAAAT0lEQVQ4jWNkYGD4z0BFwERNw0YNHKoGCgkJMQgJCRFtIAshw969ewdnwwBMjCwXohuCzzCSDCQW4DXw3bt31A1DmKGkAEaG0cJh1ECSAQBaBhQpkF91TAAAAABJRU5ErkJggg==') repeat;*/
+  background: radial-gradient(#000000, #272727);
+  background-size: 300% 300%;
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+}
+
+h1 {
+  color: #F0EBF0;
+  font-size: xx-large;
+}
+
+h2 {
+  color: #F0EBF0;
+  font-size: x-large;
+}
+
+.project-list h2 {
+  margin: auto;
+  text-align: center;
+  font-size: x-large;
+  padding-bottom: 100px;
+  padding-top: 25px;
+}
+
+.project-list a:hover {
+  color: #9E4CE6;
+  transition-duration: 0.5s;
+}
+
+h3 {
+  color: #F0EBF0;
+  font-size: large;
+  font-weight: bold;
+}
+
+h4 {
+  color: #F0EBF0;
+  font-size: large;
+}
+
+p {
+  text-align: justify;
+}
+
+.blogMain p,ul {
+  padding-bottom: 20px;
+  line-height: 150%;
+}
+
+.blogQuote p {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.slide-info p {
+  text-align: end;
+}
+
+a {
+  color: #9E4CE6;
+}
+
+a:hover {
+  color: #F5DBFA;
+  transition-duration: 0.5s;
+}
+
+.project-list a {
+  color: #F0EBF0;
+}
+
+img {
+  max-width: 1000px;
+  width: 100%;
+}
+
+iframe {
+  max-width: 1000px;
+  width: 100%;
+}
+
+.blogImageSM img {
+  max-width: 400px;
+  width: 100%;
+  padding: 40px 0px;
+  display: block;
+  margin: auto;
+}
+
+.blogImageMD img {
+  max-width: 600px;
+  width: 100%;
+  padding: 40px 0px;
+  display: block;
+  margin: auto;
+}
+
+.blogImageLG img {
+  max-width: 800px;
+  width: 100%;
+  padding: 40px 0px;
+  display: block;
+  margin: auto;
+}
+
+.homeImage img:hover {
+  opacity: .75;
+  transition-duration: 0.5s;
+}
+
+.headshot img {
+  max-width: 400px;
+  width: 85%;
+  padding: 0px;
+  display: block;
+}
+
+.projectSlide img {
+  padding-top: 60px;
+}
+
+.projectHero img {
+  padding-top: 40px;
+}
+
+.imageholder {
+  max-width: 400px;
+  width: 75%;
+  display: block;
+  margin: auto;
+  transition-duration: 0.5s;
+}
+
+.imageholder img:hover {
+  opacity: .75;
+  transition-duration: 0.5s;
+}
+
+.textholder div {
+  width: 75%;
+  padding: 0px;
+}
+
+.textholder h2 {
+  margin-top: 0px;
+}
+
+.topnav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  position: relative;
+  text-align: center;
+  margin: auto;
+}
+
+.topnav a {
+  color: #F0EBF0;
+  padding: 5px 25px 5px;
+  position: relative;
+  text-decoration: none;
+  transition-duration: 0.5s;
+}
+
+.topnav a:hover {
+  color: #9E4CE6;
+}
+
+.topnav .active {
+  color: #9E4CE6;
+}
+
+.topnav h1 {
+  font-size: xxx-large;
+}
+
+.navfloat1 {
+  flex: 100%;
+}
+
+.navfloat2 {
+  flex: 100%;
+}
+
+main {
+  margin: auto;
+  max-width: 800px;
+  padding: 40px;
+  position: relative;
+  width: 80%;
+}
+
+section {
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.mainCols {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mainColA {
+  flex: 50%;
+}
+
+.mainColA img {
+  margin: auto;
+  max-width: 400px;
+  width: 100%;
+  padding: 0px;
+  border: none;
+}
+
+.mainColB {
+  flex: 50%;
+  justify-content: flex-start;
+}
+
+.blogCols {
+  padding: 40px 0px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.blogCols img:hover {
+  opacity: .75;
+  transition-duration: 0.5s;
+}
+
+.blogCols h3 {
+  margin-top: 0px;
+}
+
+.blogColA {
+  flex: 55%;
+}
+
+.blogColA img {
+  margin: auto;
+  max-width: 400px;
+  width: 100%;
+  padding: 0px;
+  border: none;
+}
+
+.blogColB {
+  flex: 40%;
+  justify-content: flex-start;
+  padding-left: 5%;
+}
+
+.fullMain {
+  display: block;
+}
+
+.fullMain table {
+  padding-top: 10px;
+  width: auto;
+  text-align: left;
+}
+
+.fullMain th, td {
+  padding-right: 80px;
+  padding-bottom: 20px;
+}
+
+.fullMain h2 {
+  padding-top: 50px;
+}
+
+.fullMain ul {
+  list-style: none;
+}
+
+.fullMain li {
+  display: block;
+  padding: 1rem;
+  position: relative;
+}
+
+.fullMain li:hover {
+  cursor: inherit;
+  color: inherit;
+}
+
+.footnav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 20px;
+  position: relative;
+}
+
+.footnav p {
+  text-align: right;
+}
+
+.footfloat1 {
+  flex: auto;
+}
+
+.footfloat2 {
+  color: #F5DBFA;
+  flex: auto;
+  font-size: small;
+  font-style: italic;
+}
+
+
+/*Responsive*/
+@media (max-width: 769px) {
+  .topnav {
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 5px 5px 40px;
+    text-align: center;
+  }
+
+  .topnav a {
+    width: 100%;
+    text-align: center;
+    line-height: 200%;
+    padding: 5px 35px 5px;
+  }
+
+  .topnav h1 {
+    font-size: xx-large;
+    text-align: center;
+    padding: 5px;
+  }
+
+  .navfloat1 {
+    flex: 100%;
+    padding-bottom: 5px;
+  }
+
+  .navfloat2 {
+    flex: 100%;
+    line-height: 100%;
+    margin: auto;
+  }
+
+  main {
+    padding: 5%;
+    width: 90%;
+  }
+
+  .mainColA, .mainColB {
+    flex: 100%;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .blogColA, .blogColB {
+    flex: 100%;
+    justify-content: center;
+    margin: auto;
+    padding-left: 0%;
+  }
+
+  .blogCols h3 {
+    margin-top: 20px;
+  }
+
+  .fullMain th, td {
+    padding-right: 20px;
+    padding-bottom: 20px;
+  }
+
+  .footfloat1, .footfloat2 {
+    flex: 100%;
+  }
+
+}
+
+/*Animation Keyframes*/
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 0%
+  }
+
+  12.5% {
+    background-position: 50% 50%
+  }
+
+  25% {
+    background-position: 0% 100%
+  }
+
+  50% {
+    background-position: 100% 100%
+  }
+
+  62.5% {
+    background-position: 50% 50%
+  }
+
+  75% {
+    background-position: 100% 0%
+  }
+
+  100% {
+    background-position: 0% 0%
+  }
+}
+
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 10% 10%
+  }
+
+  25% {
+    background-position: 10% 90%
+  }
+
+  50% {
+    background-position: 90% 90%
+  }
+
+  75% {
+    background-position: 90% 10%
+  }
+
+  100% {
+    background-position: 10% 10%
+  }
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 10% 10%
+  }
+
+  25% {
+    background-position: 10% 90%
+  }
+
+  50% {
+    background-position: 90% 90%
+  }
+
+  75% {
+    background-position: 90% 10%
+  }
+
+  100% {
+    background-position: 10% 10%
+  }
+}

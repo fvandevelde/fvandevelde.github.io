@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌫</text></svg>">
+
+  <title>Blog Post - Routine Insecurity - Chelsea Thompto</title>
+
+  <meta name="description" content="Blog Post - Routine Insecurity by Chelsea Thompto - Research-based Transdisciplinary Artist">
+  <meta name="author" content="Chelsea Thompto">
+  <meta property="og:title" content="Blog Post - Routine Insecurity - Chelsea Thompto">
+  <meta property="og:url" content="https://chelsea.technology">
+  <meta property="og:description" content="Blog Post - Routine Insecurity by Chelsea Thompto - Research-based Transdisciplinary Artist">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/style.css">
+  <script src="../../../js/signature.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <nav class="topnav">
+      <div class="navfloat1">
+        <h1>CHELSEA THOMPTO</h1>
+      </div>
+      <div class="navfloat2">
+        <a href="../../../">Home</a>|
+        <a href="../../../projects">Projects</a>|
+        <a class="active" href="../../../writing">Writing</a>|
+        <a href="../../../about">About</a>|
+        <a href="../../../contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="fullMain">
+      <p><strong><a href="../">Back To Blog Selection</a></strong></p>
+      <hr />
+      <h2>Routine Insecurity</h2>
+      <p><i>Feb 18, 2021</i></p>
+      <br /><br />
+      <div class="blogImageLG">
+        <img src="../../../assets/images/blog/posts/2021/2_18_21_1.png" width="800px" alt="Screenshot of CAA conference page showing the test profile of someone named 'Bruce Wayne'." />
+      </div>
+      <div class="blogMain">
+        <p>
+          (Screenshot of CAA conference website.)
+        </p><br />
+        <p>
+          Last week, I had the opportunity to take part in CAA 2021 as a panelist and session chair. The conference, like so many in the last year or so, was hosted virtually in response to COVID-19. As is often the case, the virtual version of the
+          conference didn’t stack up well compared to it’s in-person predecessors. This is to be expected though, even the most well run, technologically sophisticated conference platform wouldn’t be able to replace meeting folks in person, grabbing
+          a drink or bite to eat with friends/colleagues old and new, and just generally feeling connected to a broader conversation.
+        </p>
+        <p>
+          This conference however was not technologically sophisticated.
+        </p>
+        <p>
+          It was in fact the clunky nature of the platform (provided by <a target="_blank" rel="noopener" href="https://www.confex.com/">Confex</a>) that led me down a rabbit hole ending in the realization that Confex was exposing the personal information of CAA panelists (from
+          2019 through 2021) to the Internet at large through the conference website as a result of careless coding and a lack of oversight.
+        </p>
+        <p>
+          This started when I realized that CAA was using the same platform from its previous in-person conferences to run this virtual one and that it was still just as slow now as it had been when it was functioning merely as an online
+          guide/calendar. My frustration and curiosity was amplified when I was unable to access the pre-recorded content for the conference, despite logging in and knowing my password. Having contacted IT and not yet received a response, I was
+          aimlessly browsing the conference site to see if I had missed something when I stumbled upon this:
+        </p>
+        <div class="blogImageLG">
+          <img src="../../../assets/images/blog/posts/2021/2_18_21_2.png" width="800px" alt="Screenshot of CAA conference portal showing a test panel titled 'test :P'." />
+        </div>
+        <p>
+          (Screenshot of CAA conference website.)
+        </p><br />
+        <div class="blogQuote">
+          <p>
+            “test :P”
+          </p>
+        </div>
+        <p>
+          Clearly an artifact of them building and testing the system that had been overlooked and left in place in the final release. This is of course an innocent and harmless mistake but it did get me thinking and wondering about what else they
+          may have left behind. So, I did what I encourage my students to do: I took a closer look. Using the developer tools in my web browser I took a look at the source code for the page (all of this for note is freely available, there was no
+          special access or software required). As I dug, I found comments in the source code itself about its inefficiency and about decisions yet to be made regarding its functionality. Like these two:
+        </p>
+        <div class="blogImageLG">
+          <img src="../../../assets/images/blog/posts/2021/2_18_21_3.png" width="800px" alt="Screenshot of Confex source code showing comments which hightlight problems in the code." />
+        </div>
+        <div class="blogImageLG">
+          <img src="../../../assets/images/blog/posts/2021/2_18_21_4.png" width="800px" alt="Screenshot of Confex source code showing comments which hightlight problems in the code." />
+        </div>
+        <p>
+          (Screenshots of comments found in Confex source code.)
+        </p><br />
+        <p>
+          To be clear, it's not that these code comments are in and of themselves super damning or something, but rather it's that every one of them spurred me forward until I got to something that I truly wasn’t expecting to find:
+        </p>
+        <p>
+          Sitting in my locally stored cache was the personal data: name, address, clientID, member number, gender, race, and sometimes phone number of all the panelists whose panel pages I had visited during my little exploration.
+        </p>
+        <p>
+          This information was downloaded to my machine by the normal process of the platform. In other words, the programmers at Confex had designed their system to transmit this unencrypted sensitive data automatically to anyone who navigated to
+          the site. When the system pulled a person’s name from their database, all the information they had on the person came with it.
+        </p>
+        <p>
+          Shocked at having discovered such an obvious data leak, I contacted CAA and let them know. Within 24 hours, Confex had patched the system (kinda) and CAA had sent out an email letting its current members know about the data breach (kinda).
+        </p>
+        <p>
+          What do I mean by kinda?
+        </p>
+        <p>
+          Well, on the CAA front two things:
+        </p>
+        <ul>
+          <li>First, they only contacted current members despite the leak impacting 2019 through 2021.</li>
+
+          <li>Second, while they explained that the leak had happened they didn’t attend to the scope of the issue or provide context on why/by whom the data might be accessed.
+          </li>
+        </ul>
+        <p>
+          On the Confex front:
+        </p>
+        <ul>
+          <li>First, while they roughly patched the problem, the system itself is still clunky and still transmitting more data than is required for the system to function.</li>
+
+          <li>Second, the architecture of their system is ripe for SQL injection techniques and other common web vulnerabilities. It is through a version of this that I was able to find the Mr. Wayne test account featured at the top of this article.</li>
+          <li>Third, in trying to contact the company I received no response. This is especially troubling as they host a large number of conferences every month and a brief search revealed this same vulnerability might exist across their entire
+            system.
+          </li>
+        </ul>
+        <p>
+          To be clear, CAA rightfully expected that Confex would know how to do its job (especially given Confex’s history and client volume) but it's these “kindas” that left me unsettled and led me to writing this. We live in a time where our data
+          is becoming more and more valuable while at the same time there is a constant stream of news about data breaches and leaks. It's easy to become numb to it, as with many big systemic problems it's hard for our brains to fully grapple with
+          these issues. But when I stumbled into this leak, it really got its hooks in me and I haven’t been able stop thinking about it. I think this is because I am an artist, not a security expert, and I found this leak simply by doing one of the
+          core things of my practice:
+        </p>
+        <p>
+          Looking (often times at things people would rather I not look at)
+        </p>
+        <p>
+          It might also be because my data is part of the leak or because my current body of work relates to data and the body. For whatever reason, it has really grabbed my attention. So, when I see a response full of “kinda” solutions I can’t let
+          it go. Instead I think:
+        </p>
+        <ul>
+
+          <li>What would a response look like that contextualized the leak with respect to people’s personal security and the monetization of data more broadly?</li>
+
+          <li>What would a response look like that acknowledged the different levels of risk a person might face from a leak like this depending on their race, gender, and/or research agenda?</li>
+
+          <li>What would a response look like that wasn’t invested in saving face?</li>
+
+          <li>What would a system look like that actually cared for people and their privacy in the first place?
+          </li>
+        </ul>
+        <p>
+          I keep thinking of these questions and about that stupid Bruce Wayne test page, still viewable at the time of writing this at:
+        </p>
+        <p>
+          <a target="_blank" rel="noopener" href="https://caa.confex.com/caa/2021/meetingapp.cgi/Person/3">https://caa.confex.com/caa/2021/meetingapp.cgi/Person/3</a>
+        </p>
+        <p>
+          I fixate on the <a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Black_box">black box</a> nature of all the systems being built around me and that I interact with online everyday. From Confex dumping my address into the caches of every CAA conference
+          goer to ad trackers trying to sell me endless varieties of food and clothes to facial recognition software programmed to misgender me, I am left wanting to know:
+        </p>
+        <p>
+          What would these systems look like if they were programmed with a care motive instead of a profit motive?
+        </p>
+        <p>
+          For more about my thoughts on tech and the ways our bodies are caught up in it, you can explore my new/in-progress interactive artwork <em>Landmarks</em> here:
+        </p>
+        <p>
+          Live Site:
+        </p>
+        <p>
+          <a target="_blank" rel="noopener" href="https://landmarks.cloud/">https://landmarks.cloud/</a>
+        </p>
+        <p>
+          Artist Statement and Source Code:
+        </p>
+        <p>
+          <a target="_blank" rel="noopener" href="https://github.com/cthompto/Landmarks">https://github.com/cthompto/Landmarks</a>
+        </p>
+      </div>
+      <br /><br />
+      <hr />
+      <p><strong><a href="../">Back To Blog Selection</a></strong></p>
+      <br />
+      <p>
+        For more information or to share your thoughts about this piece, please feel free to contact me at:<br /><a rel="noopener" target="_blank"
+          href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=chelseathomptoart@gmail.com">chelseathomptoart@gmail.com</a>
+      </p>
+    </div>
+  </main>
+  <footer class="footnav">
+    <div class="footfloat1">
+    </div>
+    <div class="footfloat2">
+      <p>
+        © 2021 Chelsea Thompto
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>

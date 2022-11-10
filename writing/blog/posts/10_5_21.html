@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌫</text></svg>">
+
+  <title>Blog Post - Writing Code Nobody Will See - Chelsea Thompto</title>
+
+  <meta name="description" content="Blog Post - Writing Code Nobody Will See by Chelsea Thompto - Research-based Transdisciplinary Artist">
+  <meta name="author" content="Chelsea Thompto">
+  <meta property="og:title" content="Blog Post - Writing Code Nobody Will See - Chelsea Thompto">
+  <meta property="og:url" content="https://chelsea.technology">
+  <meta property="og:description" content="Blog Post - Writing Code Nobody Will See by Chelsea Thompto - Research-based Transdisciplinary Artist">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../../css/style.css">
+  <script src="../../../js/signature.js" defer></script>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/github-dark.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+  <script>
+    hljs.highlightAll();
+  </script>
+</head>
+
+<body>
+  <header>
+    <nav class="topnav">
+      <div class="navfloat1">
+        <h1>CHELSEA THOMPTO</h1>
+      </div>
+      <div class="navfloat2">
+        <a href="../../../">Home</a>|
+        <a href="../../../projects">Projects</a>|
+        <a class="active" href="../../../writing">Writing</a>|
+        <a href="../../../about">About</a>|
+        <a href="../../../contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="fullMain">
+      <p><strong><a href="../">Back To Blog Selection</a></strong></p>
+      <hr />
+      <h2>Writing Code Nobody Will See</h2>
+      <p><i>Oct 5, 2021</i></p>
+      <br /><br />
+      <div class="blogImageSM">
+        <img src="../../../assets/images/blog/posts/2021/10_5_21_1.png" width="400px" alt="Image depicting am ascii design of the initials 'CT' in white text on a black background." />
+      </div>
+      <div class="blogMain">
+        <p>
+          Console log signature coded in JavaScript.
+        </p>
+        <br />
+        <p>
+          Nobody, or should I say very few people, will see the above image if and when I implement it into my work. The image above is generated in the console of a web browser (<a target="_blank" rel="noopener"
+            href="https://developer.mozilla.org/en-US/docs/Tools/Web_Console">FireFox</a>, <a target="_blank" rel="noopener" href="https://developer.chrome.com/docs/devtools/open/#:~:text=Press%20Command%20%2B%20Option%20%2B%20J%20">Chrome</a>, <a
+            target="_blank" rel="noopener" href="https://support.apple.com/guide/safari/use-the-developer-tools-in-the-develop-menu-sfri20948/mac">Safari</a>, or etc.) which is generally not seen by the user. Though it is available to any viewing a
+          webpage if they know where to
+          look (if you want to see the console for yourself, click the link associated with your browser above). But, if virtually nobody is going to see it, why make it? Or as it was put it in a feedback given to me recently:
+        </p>
+        <div class="blogQuote">
+          <p>
+            "...writing code no one can read? Or, writing code alone, maybe for others who you can’t see or who might emerge later?"
+          </p>
+        </div>
+        <p>
+          I love these questions and they were swirling around in my head as I prepped my classes for this week which included an introduction to JavaScript. Part of this introduction uses the <a target="_blank" rel="noopener"
+            href="https://developer.mozilla.org/en-US/docs/Web/API/Console/log">console.log</a> function to quickly and easily print characters (I am adapting this from the excellent book <a target="_blank" rel="noopener"
+            href="https://eloquentjavascript.net/">Eloquent
+            JavaScript</a><span style="text-decoration:underline;">)</span>. It is an easy way to visualize logic but the end result is, as mentioned above, mostly invisible to the average user. So I began to wonder how I might push this practice
+          into something more meaningful, to think about writing code for an audience I can't see or that might emerge later.
+        </p>
+        <p>
+          From the intersection of these questions posed to me and the practice exercise came the idea of the console log signature. In other words, a signature made in code for creative code work that only appears to those reading the source code or
+          looking at the console log as mentioned above. This means that there is more than one way to read the signature, the way seen above in the console log, or by reading the code that generates the console log image. There are also a plethora
+          of ways to write the code for the above image. From a single long line of code like this:
+        </p>
+
+
+
+        <pre>
+          <code class="language-javascript">
+console.log("\n--------------------\n----@@@--|CHELSEA|--\n---@---@-----T------\n--@----------H------\n--@----------O------\n--@----------M------\n--@----------P------\n---@---@-----T------\n----@@@------O------\n--------------------\n");
+          </code>
+        </pre>
+        <p>
+          To a longer but more visually clear format like this:
+        </p>
+        <pre>
+          <code class="language-javascript">
+console.log("");
+console.log("--------------------");
+console.log("----@@@--|CHELSEA|--");
+console.log("---@---@-----T------");
+console.log("--@----------H------");
+console.log("--@----------O------");
+console.log("--@----------M------");
+console.log("--@----------P------");
+console.log("---@---@-----T------");
+console.log("----@@@------O------");
+console.log("--------------------");
+console.log("");
+</code>
+</pre>
+        <p>
+          But there are also even more complicated and circuitous ways to write the code. Ways that perhaps allow for a reading of the source code the says something more than it's output. While the first version is a nice compact single command and
+          the second is a mere 12 lines of very clear commands, the version I like best is a convoluted mess of <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else">IF</a> and
+          <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for">FOR</a> logic that looks like this:
+        </p>
+        <pre>
+          <code class="language-javascript">
+console.log("");
+let mark = "";
+for (let i = 0; i &lt;= 9; i++) {
+  if (i === 0 || i === 9) {
+    for (let i = 0; i &lt;= 19; i++) {
+      mark += "-";
+    }
+  } else if (i === 1) {
+    for (let i = 0; i &lt;= 8; i++) {
+      if (i >= 4 && i &lt;= 6) {
+        mark += "@";
+      } else {
+        mark += "-";
+      }
+    }
+    mark += "|CHELSEA|--";
+  } else if (i === 8) {
+    for (let i = 0; i &lt;= 19; i++) {
+      if (i >= 4 && i &lt;= 6) {
+        mark += "@";
+      } else if (i === 13) {
+        mark += "O";
+      } else {
+        mark += "-";
+      }
+    }
+  } else if (i === 2 || i === 7) {
+    for (let i = 0; i &lt;= 19; i++) {
+      if (i === 3 || i === 7) {
+        mark += "@";
+      } else if (i === 13) {
+        mark += "T";
+      } else {
+        mark += "-";
+      }
+    }
+  } else if (i > 2 || i &lt; 7) {
+    for (let i = 0; i &lt;= 12; i++) {
+      if (i === 2) {
+        mark += "@";
+      } else {
+        mark += "-";
+      }
+    }
+    if (i === 3) {
+      mark += "H";
+    } else if (i === 4) {
+      mark += "O";
+    } else if (i === 5) {
+      mark += "M";
+    } else if (i === 6) {
+      mark += "P";
+    }
+    for (let i = 0; i &lt;= 5; i++) {
+      mark += "-";
+    }
+  }
+  console.log(mark);
+  mark = "";
+}
+console.log("");
+</code>
+</pre>
+        <p>
+          This produces the same result as the previous two but it approaches the problem from a very different angle. First, by using and continually modifying the same single variable (labeled above as "mark") I am enacting a trans gesture of
+          moving across and through definitions and states. Second, by leaving my chosen name "Chelsea '' human readable amongst the otherwise harder to parse code, I am highlighting the power of choosing one's name. Third, the logic of the "for
+          loop" and "if...else" gesture towards the cyclical nature of my thinking and artistic practice. There is much more I could say on why I love this but for now I will leave off with this: these elements simply don't exist in the more
+          efficient first two versions of the code.
+        </p>
+        <p>
+          So, the console log signature as penned here plays out in the viewing of the output and the reading of the source code that created it. The process of this work and my work more broadly is to consider codification as writing, to consider
+          the way codes are read by all levels of fluency. And while here "codification" and "code" refer to computer code, what might this line of thinking also have to offer other types of codes?
+        </p>
+        <p>
+          If you got this far and you are still reading, first thank you! Second, if this interested you, you might also be interested in my work <em>Transcode Manifesto</em> which can be read here:
+        </p>
+        <p>
+          <a target="_blank" href="https://chelsea.technology/writing/transcode-manifesto.html">https://chelsea.technology/writing/transcode-manifesto.html</a>
+        </p>
+      </div>
+      <br /><br />
+      <hr />
+      <p><strong><a target="_blank" rel="noopener" href="../">Back To Blog Selection</a></strong></p>
+      <br />
+      <p>
+        For more information or to share your thoughts about this piece, please feel free to contact me at:<br /><a rel="noopener" target="_blank"
+          href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=chelseathomptoart@gmail.com">chelseathomptoart@gmail.com</a>
+      </p>
+    </div>
+  </main>
+  <footer class="footnav">
+    <div class="footfloat1">
+    </div>
+    <div class="footfloat2">
+      <p>
+        © 2021 Chelsea Thompto
+      </p>
+    </div>
+  </footer>
+</body>
+
+</html>
